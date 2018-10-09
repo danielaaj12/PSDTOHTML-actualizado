@@ -1,0 +1,5 @@
+@mixin fontsConf($color, $font-size: 5em){
+    font-size: $font-size;
+    color: $color;
+}
+

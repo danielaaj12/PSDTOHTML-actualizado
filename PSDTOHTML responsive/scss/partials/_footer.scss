@@ -1,0 +1,32 @@
+/****************
+      Footer
+*****************/
+#footer_wrapper {
+    background: $color-7; 
+}
+
+#footer span {
+    display: block;
+    @include fontsConf($color-1, $measure-2); }
+    #footer p {
+        width: 960px;
+        margin: auto;
+        padding: $measure-1*2 0px; }
+    #footer p > span {
+        float: left; }
+    #footer img {
+        position: relative;
+        bottom: $measure-2;
+        float: right;
+        width: $measure-2*10; }
+
+
+span a {
+    color: $color-1; }
+
+@media (max-width:1007px){
+    #footer{
+        display: none;
+    }
+   
+}

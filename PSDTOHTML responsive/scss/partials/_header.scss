@@ -1,0 +1,128 @@
+/****************
+      Header
+*****************/
+.wrapper{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background: $color-4;
+    border-top: 17px solid $color-2;
+}
+#header{
+    position: relative;
+    width: 90%;
+    max-width: 950px;
+    min-width: 300px;
+    padding: 15px 0;
+    left: 0;
+    margin: 0 auto;
+  .logo{
+    float: left;
+  }
+  
+  .correo{
+    @include fontsConf($color-5, 13px); 
+    position: absolute;
+    top: 18px;
+    right: 0;
+    left: 0;
+  }
+  
+  .menu{
+    float: right;
+    list-style: none;
+    margin: 46px 0 0;
+    padding: 0;  
+    li{
+        display: inline;
+    }
+    
+    li + li{
+        margin-left: 65px;
+    }
+    
+    a{
+        @include fontsConf($color-6, 12px);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    a:hover,
+    .link-active{
+        color: $color-8 !important;
+    }
+  }
+}
+  
+@media (max-width: 640px){
+    .correo{
+        display: none;
+    }
+}
+
+@media (max-width: 1007px){
+    .logo{
+        width: $measure-1*5;
+    }
+    .correo{
+        text-align: center;
+        margin: auto;
+        width: 25%;
+    }
+    .menu{   
+        z-index: 1; 
+        float: right;
+        list-style: none;
+        margin: 0;
+        width: 50px;
+        padding: 0;
+        &:after, &:before{
+            content: '';
+            display: block;
+            background: #000;
+            width: $measure-1*2;
+            position: absolute;
+            top: $measure-1*-4;
+            right: 0;
+        }
+        &:before{
+            background: #00000000;
+            height: $measure-1*2;
+        }
+        &:after{
+            box-shadow: 0 $measure-1;
+            height: $measure-1*0.3;
+            top: $measure-1;
+        }
+        li{
+            left: $measure-1*-10;
+            right: 0;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            height: 0;
+        }
+        a{
+            position: relative;
+            bottom: $measure-1*2.6;
+            text-align: right;
+            display: none;
+            opacity: 0;
+        }
+        &:hover{
+            cursor: pointer;
+            li{
+                padding: $measure-1*2;
+                left: 0;
+                position: relative;
+                height: auto;
+            }
+            &:after, &:before{
+                opacity: 0;
+            }
+            a{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}

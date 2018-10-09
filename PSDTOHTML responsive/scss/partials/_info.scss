@@ -1,0 +1,37 @@
+/****************
+      Info
+*****************/
+.info_div{
+  float: left;
+  color: $color-1;
+  margin-bottom: 30px;
+}
+
+.i-part{
+  width: 70%;
+}
+
+.d-part{
+  width: 21%;
+  padding: 0px 43px;
+}
+
+.order_icons img + img{
+  padding-left: 14px;
+}
+
+@media (max-width: 1007px){
+  .i-part{
+    width: 100%;
+    text-align: justify;
+  }
+  .d-part{
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 640px){
+  .order_icons img{
+    width: 10%;
+  }
+}

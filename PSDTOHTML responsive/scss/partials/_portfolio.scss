@@ -1,0 +1,30 @@
+/****************
+      Portfolio
+*****************/
+.gallery{
+  padding: $measure-1 0px;  
+  img + img{
+      padding-left: 28px;
+  }
+}
+
+@media (max-width: 1007px){
+  .gallery{
+    padding: 0px; 
+    img{
+      width: 50%;
+      float: left;
+    } 
+    img + img{
+      padding: 0;
+    }
+  }
+}
+@media (max-width: 640px){
+  .gallery{
+    img{
+      width: 100%;
+      float: left;
+    } 
+  }
+}

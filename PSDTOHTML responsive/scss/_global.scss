@@ -1,0 +1,45 @@
+/****************
+      General
+*****************/
+
+body{
+    margin: 0;
+    line-height: 1.4;
+    background: $color-4;
+    font-family: Arial, Helvetica, sans-serif;
+    #container{
+        width: 70%;
+        max-width: 960px;
+        margin: auto;
+        display: grid;
+        place-items: center;
+    }
+    a{
+        text-decoration: none;
+    }
+    h2, h3{
+        text-transform: uppercase;
+    }
+
+    h2{
+        font-size: $measure-1;
+    }
+
+    h3{
+        @include fontsConf($color-8, 1em);
+    } 
+    p{
+        margin: 0;
+    }
+}
+
+@media (max-width: 640px){
+    h3{
+        @include fontsConf($color-8, 4em);
+    } 
+    p{
+        @include fontsConf($color-8, 1em);
+    }
+
+}
+  
